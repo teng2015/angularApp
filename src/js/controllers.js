@@ -8,9 +8,10 @@ angular.module('appController',[])
             $scope.verific = function(){
 
                 $http.post("../php/hello.php",$scope.user).then(function (response) {
-                    console.log(response);
+
                     if(response.data && response.data.new_id){
-                        $location.path( "modules/"+response.data.new_id);
+                         window.location.href = "modules/"+response.data.new_id;
+
                         console.log(response.data);
                     }else{
                         $scope.validateTip = response.data.ERROR;
