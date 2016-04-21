@@ -1,0 +1,29 @@
+<div class="container form-custom" ng-controller="LoginController">
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">请输入用户名</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" ng-model="user.name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">请输入密码</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="user.pasw">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="verific()">登 录</button>
+            </form>
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6" ng-bind="validateTip"></div>
+        <div class="col-xs-3"></div>
+    </div>
+</div>
