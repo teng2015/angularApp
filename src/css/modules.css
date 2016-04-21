@@ -2,6 +2,23 @@
     padding-top: 50px;
     margin-bottom: 40px;
 }
+.home{
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 200px;
+}
+.homerow{
+    padding: 0;
+}
+.login{
+    width: 100%;
+}
+.signin{
+    width: 100%;
+}
 .test{
     width: 160px;
     height: 160px;

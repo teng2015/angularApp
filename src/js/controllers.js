@@ -2,17 +2,35 @@
  * Created by dell on 2016/4/19.
  */
 angular.module('appController',[])
+    .controller('HomeController',
+        ['$scope','$location',function($scope,$location){
+            $scope.signIn = function(){
+                $location.path('login');
+            }
+        }]
+    )
+    .controller('ModulesController',
+        ['$scope','$location',function($scope,$location){
+            $scope.test1 = function (){
+                $location.path($location.path()+'/test1');
+            };
+            $scope.test2 = function (){
+                $location.path($location.path()+'/test2');
+            };
+            $scope.test3 = function (){
+                $location.path($location.path()+'/test3');
+            };
+            $scope.test4 = function (){
+                $location.path($location.path()+'/test4');
+            }
+        }]
+    )
     .controller('LoginController',
-        ['$scope','$http',function($scope,$http,$location){
-
+        ['$scope','$http','$location',function($scope,$http,$location){
             $scope.verific = function(){
-
                 $http.post("../php/hello.php",$scope.user).then(function (response) {
-
                     if(response.data && response.data.new_id){
-                         window.location.href = "modules/"+response.data.new_id;
-
-                        console.log(response.data);
+                        $location.path(response.data.new_id);
                     }else{
                         $scope.validateTip = response.data.ERROR;
                     }
@@ -20,10 +38,6 @@ angular.module('appController',[])
             }
         }]
     )
-    .controller('ModulesController',
-        ['scope',function($scope){
-
-        }])
     .controller('Test1Controller',
         ['$scope',function($scope){
 

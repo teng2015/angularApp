@@ -10,12 +10,16 @@ angular.module('myApp',
         ['$routeProvider',function($routeProvider){
             $routeProvider.
                 when('/', {
-                    controller: 'LoginController',
-                    templateUrl: 'modules/login/login.html'
+                    controller: 'HomeController',
+                    templateUrl: 'modules/home/home.html'
                 }).
                 when('/modules',{
                     controller:'ModulesController',
                     templateUrl:'modules/modules.html'
+                }).
+                when('/login',{
+                    controller: 'LoginController',
+                    templateUrl: 'modules/login/login.html'
                 }).
                 when('/modules/test1', {
                     controller: 'Test1Controller',
