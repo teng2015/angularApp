@@ -9,6 +9,13 @@ angular.module('appController',[])
             }
         }]
     )
+    .controller('HeaderController',
+        ['$scope','$location',function($scope,$location){
+            $scope.back = function () {
+                $location.back();
+            }
+        }]
+    )
     .controller('ModulesController',
         ['$scope','$location',function($scope,$location){
             $scope.test1 = function (){
