@@ -4,6 +4,7 @@
 angular.module('myApp',
     [
         'ngRoute',
+        'ngAnimate',
         'appController'
     ])
     .config(
