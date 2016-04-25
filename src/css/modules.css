@@ -27,7 +27,7 @@ html,body{
     margin-top: 100px;
 }
 .test{
-    width: 160px;
+    width: 100%;
     height: 160px;
     text-align: center;
     line-height: 160px;
