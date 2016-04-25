@@ -3,16 +3,17 @@ html,body{
     height: 100%;
 }
 .row{
-    padding-top: 50px;
     margin-bottom: 40px;
+}
+.modules{
+    padding: 20px;
 }
 .home{
     width: 100%;
     height: 200px;
-    line-height: 200px;
     text-align: center;
     font-size: 40px;
-    margin-top: 200px;
+    margin-top: 80px;
 }
 .homerow{
     padding: 0;
